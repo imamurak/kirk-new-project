@@ -14,6 +14,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+
+
   </head>
 
   <body>
@@ -107,7 +109,7 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Kirk's Dashboard</h1>
+            <h1 class="h2" id="hideit">Kirk's Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <button class="btn btn-sm btn-outline-secondary">Share</button>
@@ -123,6 +125,7 @@
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
           <h2>Section title</h2>
+          <a href="#" class="btn btn-primary my-2" id="magicbutton">Button</a>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -254,13 +257,47 @@
       </div>
     </div>
 
+    <a href="#" class="btn btn-primary my-2" id="magicbutton">Button</a>
+    <a href="#" class="btn btn-primary my-2" id="magicbutton2">Button2</a>
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.slim.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')</script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+
+<!--
+    //$(document).ready(function(){
+
+    // jQuery methods go here...
+        //•        A $ sign to define/access jQuery
+        //•        A (selector) to "query (or find)" HTML elements
+        //•        A jQuery action() to be performed on the element(s)
+
+        //$(this).hide() - hides the current element.
+        //$("p").hide() - hides all <p> elements.
+        //$(".test").hide() - hides all elements with class="test".
+        //$("#test").hide() - hides the element with id="test".
+
+    //});
+-->
+
+
+    <script>
+    $(document).ready(function(){
+      $("#magicbutton").click(function(){
+      $("#hideit").hide();
+      $("#magicbutton2").click(function(){
+      $("#hideit").fadeIn();
+    });
+    });
+    });
+    </script>
+
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
